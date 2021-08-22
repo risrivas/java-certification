@@ -1,0 +1,5 @@
+- Only 1 exam needed for Java-11 certification:
+1Z0-819
+
+- 50 multiple choice questions: 90 minutes; passing marks = 68%
+
