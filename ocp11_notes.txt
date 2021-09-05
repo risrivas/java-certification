@@ -1,7 +1,35 @@
+Course 0:
+Pluralsight courses by Sander Mak
+
+################################
+# Java 9 Modularity: First Look
+################################
+- Module systems
+- HTTP/2 client, updates to Stream APIs, Collection factories
+
+
+
+#############################
+# What's new in Java 11: LTS
+#############################
+
+
+- Deprecations and removals of outdated APIs
+- New HttpClient API
+- Ability to run source code directly without compiling
+- 2 new GCs
+- Language, Library, Performance, Security improvements
+
+
+
+=====================================
+
+# Certification path
 - Only 1 exam needed for Java-11 certification:
 1Z0-819
 
 - 50 multiple choice questions: 90 minutes; passing marks = 68%
+
 
 #######################################
 # 01 - Java Data Types and String APIs
