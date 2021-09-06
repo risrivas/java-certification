@@ -7,6 +7,40 @@ Pluralsight courses by Sander Mak
 - Module systems
 - HTTP/2 client, updates to Stream APIs, Collection factories
 
+- before JDK9, there was 1 monolithic jar containing all the JDK classes = rt.jar
+- from JDK9, it is modular now with more than 90 platform modules
+- main base module on which all modules depend on = java.base
+
+# java.base
+first half public = packages like java.lang, java.util, java.io etc
+second half private (internal and not accessible) = sun.util, jdk.internal, etc
+
+# define a module by module descriptor
+- file name = module-info.java
+- exports <package name>
+- requires <module name>
+
+- example1:
+module java.base {
+   exports java.lang;
+   exports java.util;
+   exports java.io;
+   // and more
+}
+
+- example2:
+module java.sql {
+   exports java.sql;
+   exports javax.sql;
+   exports javax.transaction.xa;
+
+   requires java.logging;
+   requires java.xml;
+}
+
+
+
+
 
 
 #############################
