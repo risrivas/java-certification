@@ -39,6 +39,29 @@ module java.sql {
 }
 
 
+------------
+
+### Easy Text Single Module
+
+- main package is like this:
+package javamodularity.easytext;
+
+- created a new module-info.java at same level as javamodularity
+easytext/javamodularity
+easytext/module-info.java
+
+module easytext {
+  requires java.base;
+}
+
+- command line compile before source folder src/
+javac --module-source-path src -d out $(find . -name '*.java')
+
+- command line run
+java --module-path out -m easytext/javamodularity.easytext.Main ../../../../ocp11_notes.txt
+
+
+
 
 
 
