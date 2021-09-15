@@ -41,7 +41,7 @@ module java.sql {
 
 ------------
 
-### Easy Text Single Module
+### Easy Text Module
 
 - main package is like this:
 package javamodularity.easytext;
@@ -60,4 +60,30 @@ javac --module-source-path src -d out $(find . -name '*.java')
 - command line run
 java --module-path out -m easytext/javamodularity.easytext.Main ../../../../ocp11_notes.txt
 
-# adding the second module
+
+## Transitive dependencies
+app -> java.sql -> java.logging, java.xml
+
+- suppose app needs access to java.logging and java.xml too
+- module descriptors are like this:
+module app {
+   requires java.sql;
+}
+
+module java.sql {
+   requires transitive java.logging;
+   requires transitive java.xml;
+   exports java.sql;
+}
+
+- handy command to list all java dependencies
+java --list-modules
+
+- exclusive exports can export to a specific package
+- example:
+module easytext.gui {
+   exports javamodularity.easytext.gui to javafx.graphics;
+   ...
+}
+
+
