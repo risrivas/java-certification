@@ -56,10 +56,11 @@ module easytext {
 
 - command line compile before source folder src/
 javac --module-source-path src -d out $(find . -name '*.java')
+javac --module-source-path src -d out $(find . ! \( -path ./src/easytext.gui -prune \) -name '*.java')
 
 - command line run
 java --module-path out -m easytext/javamodularity.easytext.Main ../../../../ocp11_notes.txt
-
+java --module-path out -m easytext.cli/javamodularity.easytext.cli.Main testinput.txt
 
 ## Transitive dependencies
 app -> java.sql -> java.logging, java.xml
@@ -86,4 +87,5 @@ module easytext.gui {
    ...
 }
 
-
+- dependency injection shown in module 4 using service api and interfaces
+- use provides with

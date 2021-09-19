@@ -26,7 +26,7 @@ public class Main {
 
       List<List<String>> sentences = toSentences(text);
 
-      Iterable<Analyzer> analyzers = null;
+      Iterable<Analyzer> analyzers = ServiceLoader.load(Analyzer.class);
       for (Analyzer analyzer: analyzers) {
          System.out.println(analyzer.getName() + ": " + analyzer.analyze(sentences));
       }
