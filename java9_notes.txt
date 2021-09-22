@@ -89,3 +89,29 @@ module easytext.gui {
 
 - dependency injection shown in module 4 using service api and interfaces
 - use provides with
+
+########
+# jlink
+########
+https://www.baeldung.com/jlink
+
+- jlink is a tool that generates a custom Java runtime image that contains only the platform modules that are required for a given application
+- in other words, create a very small "JRE-like-image" containing only the required modules
+- With jlink, we can create our own, small JRE that contains only the relevant classes that we want to use,
+without wasting memory, and as a result, we'll see increased performance
+
+- use jdeps to get list of modules needed for application
+- example
+jdeps --module-path out -s --module jlinkModule
+
+- create a custom jre, syntax:
+jlink [options] --module-path modulepath
+  --add-modules module [, module…]
+  --output <target-directory>
+
+- example
+jlink --module-path "%JAVA_HOME%\jmods";out
+  --add-modules jlinkModule
+  --output customjre
+
+
