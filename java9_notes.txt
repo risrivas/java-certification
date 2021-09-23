@@ -90,6 +90,7 @@ module easytext.gui {
 - dependency injection shown in module 4 using service api and interfaces
 - use provides with
 
+
 ########
 # jlink
 ########
@@ -115,3 +116,25 @@ jlink --module-path "%JAVA_HOME%\jmods";out
   --output customjre
 
 
+########################
+# From Java 8 to Java 9
+########################
+- can ignore Java module system and still use classpaths
+javac -cp $CLASSPATH ...
+java -cp $CLASSPATH ...
+
+- all application jars are by default 'unnamed' module, however JDK is modularized
+
+- non-default modules like javax.xml.bind can be added explicitly to javac
+javac --add-modules javax.xml.bind ...
+
+- automatic modules can add non-modular JAR (like apache commons jar) to module path
+ . place the jar in lib dir
+ . create module-info.java:
+module application {
+   requires commons.lang;
+}
+
+ . compile and run as follows:
+javac --module-path lib --module-source-path ...
+java --module-path lib:out -m application/...
