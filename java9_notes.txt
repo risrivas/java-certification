@@ -138,3 +138,33 @@ module application {
  . compile and run as follows:
 javac --module-path lib --module-source-path ...
 java --module-path lib:out -m application/...
+
+
+
+####################################
+# New course: What's new in Java 9
+####################################
+- handy command to list all java modules
+java --list-modules
+
+- describe a module, example:
+$ java --describe-module java.sql
+java.sql@11.0.11
+exports java.sql
+exports javax.sql
+requires java.transaction.xa transitive
+requires java.xml transitive
+requires java.logging transitive
+requires java.base mandated
+uses java.sql.Driver
+
+- if java8 compile is used, then can force to run via java 9 correctly or incorrectly
+java --illegal-access=deny Main
+java --illegal-access=permit Main
+
+- add module explicitly
+javac --add-exports java.base/sun.security.x509=ALL-UNNAMED Main.java
+java --add-exports java.base/sun.security.x509=ALL-UNNAMED Main
+
+
+
