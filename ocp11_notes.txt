@@ -50,3 +50,73 @@ boolean flag = (new Random()).nextBoolean();
 - byte range = -128 to 127 => (-2^7) to (2^7-1)
 - short range = -32768 to 32767 => (-2^15) to (2^15-1)
 - int range = (-2^31) to (2^31-1)
+
+
+
+
+################################################################################################
+
+################
+# 02 - Java IO
+################
+
+## Introduction
+- read/write data to memory + disk + network
+- network is not in certification scope
+- bytes and chars
+
+- Java IO - Java v1 - 1995
+- Java NIO - Java v1.4 - 2004
+- Java NIO2 - Java v7 - 2011
+
+- Reading chars = Reader
+- Writing chars = Writer
+
+- Reading bytes = InputStream
+- Writing bytes = OutputStream
+
+- Reading characters from a File
+                 Reader
+    |               |              |
+FileReader    StringReader    CharArrayReader
+
+- to create a Reader, need:
+a File to create a FileReader
+a String to create a StringReader
+a char[] to create a CharArrayReader
+
+- Reader class has abstract methods:
+close()
+read(char[], int, int)
+
+- non-abstract methods:
+read()
+read(char[])
+read(CharBuffer)
+
+
+## File and Path
+- to deal with files, 2 APIs:
+File from Java IO
+Path from Java NIO 2
+
+- key points for File
+create and delete file
+create dir
+analyze the path
+get the real path to a file or dir
+creating a new File("...") does NOT creates a file
+
+- with Files
+copy and move files
+
+- demo code
+PlayWithFiles
+
+
+
+
+
+
+
+
