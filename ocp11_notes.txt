@@ -54,16 +54,16 @@ boolean flag = (new Random()).nextBoolean();
 
 
 
-################################################################################################
+#######################################################################################
 
 ################
 # 02 - Java IO
 ################
 
 ## Introduction
+- data = bytes and chars
 - read/write data to memory + disk + network
 - network is not in certification scope
-- bytes and chars
 
 - Java IO - Java v1 - 1995
 - Java NIO - Java v1.4 - 2004
@@ -98,7 +98,7 @@ read(CharBuffer)
 ## File and Path
 - to deal with files, 2 APIs:
 File from Java IO
-Path from Java NIO 2
+Path from Java NIO2
 
 - key points for File
 create and delete file
@@ -112,6 +112,16 @@ copy and move files
 
 - demo code
 PlayWithFiles
+
+- Why another model for a Path?
+File does not know the underlying OS file system and is independent of it
+so, not possible to access specific features of underlying OS
+Solution: one interface with specific implementations of each file systems
+
+- demo code
+PlayWithPath
+
+
 
 
 
