@@ -122,8 +122,10 @@ Solution: one interface with specific implementations of each file systems
 PlayWithPath
 
 
-
-
+## Reading and Writing Characters
+- Reader and Writer
+- demo code
+PlayWithReader
 
 
 

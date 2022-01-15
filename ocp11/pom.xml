@@ -10,6 +10,7 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>manipulating-files</module>
+    <module>reader-writer</module>
   </modules>
 
   <name>ocp11</name>

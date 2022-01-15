@@ -3,7 +3,7 @@ package org.paumard.files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class PlayWithPath {
+public class PlayWithPath0 {
 
     public static void main(String[] args) {
         Path path1 = Paths.get("c:/images/seaside.jpg");
