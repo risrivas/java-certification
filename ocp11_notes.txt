@@ -121,11 +121,26 @@ Solution: one interface with specific implementations of each file systems
 - demo code
 PlayWithPath
 
+- 2 ways to create path
+Path path1 = Paths.get("c:/images/seaside.jpg");
+
+// new in Java 11
+Path path2 = Path.of("mountain.jpg");
+
 
 ## Reading and Writing Characters
 - Reader and Writer
 - demo code
 PlayWithReader
+PlayWithWriter
+
+- new way to create buffered reader/writer
+BufferedReader reader = Files.newBufferedReader(path)
+BufferedWriter writer = Files.newBufferedWriter(path)
+
+- 2 ways to read from buffered reader
+String line = reader.readLine();
+Stream<String> lines = reader.lines();
 
 
 

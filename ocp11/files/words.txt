@@ -1,1 +1,1 @@
-Writing to a buffered writer
+Writing to a buffered writer using path

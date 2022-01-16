@@ -11,23 +11,22 @@ public class PlayWithBufferedReader {
     public static void main(String[] args) {
 
         Path path = Path.of("files/sonnet.txt");
-        try (BufferedReader bufferedReader = Files.newBufferedReader(path);) {
 
-            String line = bufferedReader.readLine();
+        // using readLine()
+        try (BufferedReader reader = Files.newBufferedReader(path)) {
+            String line = reader.readLine();
             while (line != null) {
                 System.out.println("line = " + line);
-                line = bufferedReader.readLine();
+                line = reader.readLine();
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        try (BufferedReader bufferedReader = Files.newBufferedReader(path);) {
-
-            Stream<String> lines = bufferedReader.lines();
+        // using Stream
+        try (BufferedReader reader = Files.newBufferedReader(path)) {
+            Stream<String> lines = reader.lines();
             lines.forEach(System.out::println);
-
         } catch (IOException e) {
             e.printStackTrace();
         }
