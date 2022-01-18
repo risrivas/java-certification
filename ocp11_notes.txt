@@ -143,6 +143,15 @@ String line = reader.readLine();
 Stream<String> lines = reader.lines();
 
 
+## Reading and Writing Bytes
+- InputStream and OutputStream
+- FileInputStream and ByteArrayInputStream
+- there are data and object streams also
+
+- demo code
+
+- OutputStreamWriter needs to wrap up an OutputStream like ByteArrayOutputStream
+- InputStreamReader needs to wrap up an InputStream like ByteArrayInputStream
 
 
 

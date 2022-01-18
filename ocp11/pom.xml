@@ -11,6 +11,7 @@
   <modules>
     <module>manipulating-files</module>
     <module>reader-writer</module>
+      <module>inputstream-outputstream</module>
   </modules>
 
   <name>ocp11</name>
