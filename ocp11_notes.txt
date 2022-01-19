@@ -59,6 +59,12 @@ boolean flag = (new Random()).nextBoolean();
 ################
 # 02 - Java IO
 ################
+# Resources:
+Pluralsight
+OCP11 book
+Effective Java - Serialization
+OCP11 practice tests
+Udemy OCP11 practice tests
 
 ## Introduction
 - data = bytes and chars
@@ -154,10 +160,10 @@ ReadingCharactersFromBytes = OutputStreamWriter, InputStreamReader, ByteArrayOut
 PlayWithDataStream = DataOutputStream, DataInputStream, ByteArrayOutputStream, ByteArrayInputStream
 PlayWithObjectStream = ObjectOutputStream, ObjectInputStream, FileOutputStream, FileInputStream
 
-
 - OutputStreamWriter needs to wrap up an OutputStream like ByteArrayOutputStream
 - InputStreamReader needs to wrap up an InputStream like ByteArrayInputStream
 
 
+## Using Scanner
 
 
