@@ -6,14 +6,13 @@ public class PlayWithObjectInputStream {
 
     public static void main(String[] args) {
 
-        try (FileInputStream fis = new FileInputStream("files/users.bin");
-             ObjectInputStream ois = new ObjectInputStream(fis);) {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("files/users.bin"))) {
 
             Object o1 = ois.readObject();
             Object o2 = ois.readObject();
 
-            System.out.println("jennifer = " + o1);
-            System.out.println("paul = " + o2);
+            System.out.println("paul = " + o1);
+            System.out.println("jennifer = " + o2);
 
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();

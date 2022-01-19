@@ -9,8 +9,9 @@ public class PlayWithDataStream {
         int[] ints = {1, 2, 3, 4, 5};
         byte[] bytes = {};
 
+        // write int
         try (ByteArrayOutputStream os = new ByteArrayOutputStream();
-             DataOutputStream dos = new DataOutputStream(os);) {
+             DataOutputStream dos = new DataOutputStream(os)) {
 
             for (int integer : ints) {
                 dos.writeInt(integer);
@@ -24,8 +25,9 @@ public class PlayWithDataStream {
 
         System.out.println("bytes.length = " + bytes.length);
 
+        // read int
         try (ByteArrayInputStream bis = new ByteArrayInputStream(bytes);
-             DataInputStream dis = new DataInputStream(bis);) {
+             DataInputStream dis = new DataInputStream(bis)) {
 
             for (int i = 0; i < 5; i++) {
                 int read = dis.readInt();

@@ -149,6 +149,11 @@ Stream<String> lines = reader.lines();
 - there are data and object streams also
 
 - demo code
+PlayWithInputStream = FileOutputStream, FileInputStream
+ReadingCharactersFromBytes = OutputStreamWriter, InputStreamReader, ByteArrayOutputStream, ByteArrayInputStream
+PlayWithDataStream = DataOutputStream, DataInputStream, ByteArrayOutputStream, ByteArrayInputStream
+PlayWithObjectStream = ObjectOutputStream, ObjectInputStream, FileOutputStream, FileInputStream
+
 
 - OutputStreamWriter needs to wrap up an OutputStream like ByteArrayOutputStream
 - InputStreamReader needs to wrap up an InputStream like ByteArrayInputStream
