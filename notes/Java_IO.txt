@@ -1,9 +1,16 @@
 ## Resources:
 Pluralsight
 OCP11 book
+Serialization pdf
 Effective Java - Serialization
 OCP11 practice tests
 Udemy OCP11 practice tests
+
+
+
+##############
+# Pluralsight
+##############
 
 ## Introduction
 - data = bytes and chars
@@ -118,5 +125,30 @@ char[] chars = console.readPassword();
 
 - Scanner is inside java.util
 - Scanner can be opened on any reader
+
+
+
+#############
+# OCP11 book
+#############
+Chapter 19: I/O
+
+# Conceptualizing the file system
+- file system is in charge of reading and writing data within a computer
+- Windows-based systems use a different file system than Unix-based systems
+- JVM will automatically connect to the local file system
+
+- Root directory is the topmost directory in the file system
+- Windows - drive name such as c:\
+- Unix - forward slash /
+
+- Path is a String representation of a file or directory within a file system
+- each file system has its own path separator
+- value to the left of the separator is the parent of the value to the right
+- paths can be absolute or relative
+
+# Storing data as bytes
+- Data is stored in a file system and memory as a 0 or 1 called a bit
+
 
 
