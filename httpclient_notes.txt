@@ -1,0 +1,27 @@
+###############
+# Introduction
+###############
+
+Client -> Server
+
+HTTP GET, POST, PUT, DELETE
+
+- we are learning HTTP Client here, not HTTP server
+
+- important classes
+HttpClient - send(), sendAsync
+HttpRequest
+HttpResponse
+
+- quick example:
+HttpClient client = HttpClient.newHttpClient();
+HttpRequest request = HttpRequest.newBuilder(URI.create("https://pluralsight.com")).build();
+HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+- decommissioned HttpURLConnection
+
+- third party libraries
+Apache HttpComponents
+Square's OkHttp
+JAX-RS REST Client
+
