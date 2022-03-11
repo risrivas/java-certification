@@ -25,3 +25,21 @@ Apache HttpComponents
 Square's OkHttp
 JAX-RS REST Client
 
+
+######################
+# First HTTP requests
+######################
+- sample module-info.java
+module myapplication {
+    requires java.net.http;
+}
+
+- Synchronous HTTP requests
+send(HttpRequest, HttpResponse.BodyHandler<T>)
+
+- BodyHandlers
+ofString() => String
+ofByteArray() => byte[]
+
+
+====> Pluralsight courses - no need to make notes

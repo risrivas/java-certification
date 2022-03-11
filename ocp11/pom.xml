@@ -13,6 +13,7 @@
     <module>reader-writer</module>
       <module>inputstream-outputstream</module>
       <module>console</module>
+    <module>linkfetcher</module>
   </modules>
 
   <name>ocp11</name>
