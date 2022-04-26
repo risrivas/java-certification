@@ -1,0 +1,24 @@
+###########
+# Download
+###########
+- Java FX is not part of JDK11
+- so need to download from site: https://gluonhq.com/products/javafx/
+- once downloaded - set it up in default project structure:
+Global Libraries -> add java-fx folder lib files
+
+- HelloWorld project is created by default in IntelliJ with module info files + dependencies
+
+
+###########
+# Overview
+###########
+- JavaFX was designed with the MVC pattern in mind
+- this pattern keeps the code that handles an application's data separate from the UI Code
+- thus, we wouldn't mix the code that deals with the UI and the code that manipulates the application data in the same class
+- controller is the middleman between the UI and the data
+
+- Main class should extend Applicaton => entry point
+init() -> start(Stage )
+
+Stage is like Windows and Scene is like UI nodes
+
