@@ -22,3 +22,9 @@ init() -> start(Stage )
 
 Stage is like Windows and Scene is like UI nodes
 
+- best practice is to use fxml file to define UI controls and business logic to be put in Java code
+
+
+##########
+# Layouts
+##########
