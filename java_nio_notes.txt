@@ -1,0 +1,21 @@
+###############
+# Introduction
+###############
+- build a socket server in Java
+- this is the most common design pattern in trading systems
+- Project: JavaNIO
+
+####################################################
+# Single-Threaded Blocking Server with old Java.IO
+####################################################
+- blocking means thread has to wait for 1 socket connection to server before moving to next
+
+- demo code: SingleThreadedBlockingServer
+- given enough comments in the code for the notes
+
+- test via connecting from terminal / git bash / putty
+telnet localhost 8080
+
+# drawback
+- if one client connects to server, then second client has to wait to be served until the first client disconnects!
+
